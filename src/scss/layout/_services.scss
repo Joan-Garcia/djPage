@@ -1,0 +1,33 @@
+.services {
+    background-color: $dark;
+    color: $white;
+    padding: $separation 0;
+    h2 {
+        text-align: center;
+    }
+}
+.services-content {
+    @include tablet {
+        @include grid(3, $separation / 2);
+        .service {
+            border-bottom: none;
+        }
+    }
+}
+.service {
+    border-bottom: 1px solid #3d3b3b;
+    &:last-of-type {
+        border-bottom: none;
+    }
+    img {
+        margin: 2rem 0;
+    }
+    h3 {
+        text-align: center;
+        padding: 1rem;
+    }
+    p {
+        color: $white;
+        text-align: justify;
+    }
+}

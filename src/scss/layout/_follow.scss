@@ -1,0 +1,15 @@
+.follow {
+    padding: $separation 0;
+    h2 {
+        text-align: center;
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        img {
+            max-width: 10rem;
+        }
+    }
+}

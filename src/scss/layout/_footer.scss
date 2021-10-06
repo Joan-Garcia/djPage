@@ -1,0 +1,22 @@
+.footer {
+    background-color: $black;
+    padding: $separation / 2;
+    text-align: center;
+
+    a {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    img {
+        max-width: 6rem;
+    }
+
+    p {
+        color: $white;
+        margin: 0;
+    }
+}

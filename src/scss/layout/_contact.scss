@@ -1,0 +1,93 @@
+.contact {
+    background-image: url("../img/contact.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .contact-overlay {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0.65+100 */
+        background: -moz-linear-gradient(
+            -45deg,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.65) 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+            -45deg,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.65) 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.65) 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+    .contact-content {
+        color: $white;
+        padding: $separation 0;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            color: $white;
+        }
+    }
+}
+
+.form {
+    max-width: 70rem;
+    margin: 0 auto;
+    .field {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        align-items: center;
+
+        label {
+            flex: 0 0 8rem;
+        }
+
+        input,
+        textarea {
+            flex: 1;
+            padding: 1rem;
+            background: transparent;
+            color: $white;
+            border: 1px solid #e1e1e1;
+            border-radius: 1rem;
+        }
+        textarea {
+            padding: 1rem;
+            height: 10rem;
+            resize: none;
+        }
+
+        /* Cambia el color del icono a blanco */
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+
+        &:last-of-type {
+            @include tablet {
+                justify-content: flex-end;
+            }
+        }
+
+        .button {
+            font-size: 2rem;
+            margin: 2rem 0 0 0;
+            @include tablet {
+                flex: 0 1 auto;
+                padding: 1rem 4rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
