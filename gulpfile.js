@@ -8,6 +8,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const concat = require("gulp-concat");
 const terser = require("gulp-terser-js");
 const rename = require("gulp-rename");
+const del = require("del");
 
 const paths = {
     scss: "src/scss/**/*.scss",
@@ -46,5 +47,15 @@ function watchArchivos() {
     watch(paths.js, javascript);
 }
 
+function delMaps() {
+    return del([
+        "build/css/app.css.map",
+        "!build/css",
+        "build/js/bundle.js.min.map",
+        "!build/js",
+    ]);
+}
+
 exports.versionWebp = versionWebp;
+exports.delMaps = delMaps;
 exports.default = parallel(css, javascript, watchArchivos);
