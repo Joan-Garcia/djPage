@@ -1,7 +1,9 @@
 .video {
-    max-height: 70vh;
+    max-width: 100%;
+    max-height: 89vh;
     position: relative;
     overflow: hidden;
+    background-color: $black;
 
     .overlay {
         position: absolute;
@@ -42,7 +44,8 @@
 
     video {
         //display: block;
-        width: 100%;
+        min-width: 100%;
+        min-height: 89vh;
         overflow: hidden;
         filter: blur(1rem);
         z-index: -20;

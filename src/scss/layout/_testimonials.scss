@@ -1,0 +1,52 @@
+.testimonials {
+    padding: $separation 0;
+    h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .testimonials-content {
+        @include tablet {
+            @include grid(2, 2rem);
+        }
+
+        .testimonial {
+            background-color: darken($white, $amount: 6);
+            border-radius: 1rem;
+            padding: 2rem;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+
+            &:last-of-type {
+                margin: 0;
+            }
+
+            @include tablet {
+                margin: 0;
+            }
+
+            blockquote {
+                padding-left: 5rem;
+                text-align: justify;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background-image: url(../../../build/img/quote.svg);
+                    background-repeat: no-repeat;
+                    width: 6rem;
+                    height: 8rem;
+                    display: block;
+                    left: -2rem;
+                    filter: invert(0.8);
+                }
+            }
+
+            p {
+                text-align: right;
+                margin-right: 4rem;
+            }
+        }
+    }
+}

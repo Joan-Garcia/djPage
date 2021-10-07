@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+    eventListeners();
     scrollNav();
     scrollUp();
 });
+
+function eventListeners() {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.addEventListener("click", responsiveNavigation);
+}
 
 function scrollNav() {
     const links = document.querySelectorAll(".main-nav");
@@ -13,6 +19,8 @@ function scrollNav() {
             const section = document.querySelector(
                 e.target.attributes.href.value
             );
+
+            responsiveNavigation();
 
             section.scrollIntoView({
                 behavior: "smooth",
@@ -34,4 +42,8 @@ function scrollUp() {
         });
     });
 }
-// Test for git
+
+function responsiveNavigation() {
+    const nav = document.querySelector(".main-nav");
+    nav.classList.toggle("show-nav");
+}

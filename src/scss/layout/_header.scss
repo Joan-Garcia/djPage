@@ -4,6 +4,12 @@
     .header-content {
         padding: $separation / 2 0;
 
+        .menu-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         @include tablet {
             display: flex;
             justify-content: space-between;
@@ -22,6 +28,11 @@
 }
 
 .main-nav {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s linear,
+        height 0.8s linear;
     a {
         display: block;
         color: $white;
@@ -51,10 +62,28 @@
     @include tablet {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        align-items: center;
+        gap: 1.5rem;
+        opacity: 1;
+        visibility: visible;
 
         a {
             padding: 1rem;
         }
     }
+}
+
+.mobile-menu {
+    @include tablet {
+        display: none;
+    }
+    img {
+        width: 5rem;
+    }
+}
+
+.show-nav {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
 }
